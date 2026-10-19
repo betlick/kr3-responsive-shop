@@ -33,6 +33,11 @@ if (orderForm && selectedProduct && successMessage) {
     selectedProduct.value = productCode;
   }
 
+  orderForm.addEventListener('reset', () => {
+    clearErrors();
+    successMessage.hidden = true;
+  });
+
   // При отключённом JS работают встроенные required, type и pattern.
   // С JS добавляем к ним подсветку и сообщение без перезагрузки страницы.
   orderForm.noValidate = true;
@@ -60,7 +65,7 @@ if (orderForm && selectedProduct && successMessage) {
     orderForm.reset();
     orderDialog?.close();
     // Учебная демонстрация: сервер не подключён, данные никуда не отправляются.
-    successMessage.textContent = `Заявка на «${productName}» заполнена корректно. Это учебная демонстрация: данные не отправлены.`;
+    successMessage.textContent = `Заявка на «${productName}» заполнена корректно.`;
     successMessage.hidden = false;
     successMessage.focus();
   });

@@ -49,3 +49,4 @@ kr3-responsive-shop/
 ├── images/
 ├── README.md
 └── .gitignore
+```
