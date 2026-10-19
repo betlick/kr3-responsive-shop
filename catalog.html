@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог Study Store: три категории техники, цены, карточки товаров и таблица сравнения.">
+  <title>Каталог товаров — Study Store</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js?v=kr1-final" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Study Store</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">О товарах</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main" id="main-content" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a class="breadcrumbs__link" href="index.html">Главная</a><span class="breadcrumbs__current" aria-current="page">Каталог</span></nav>
+    <section class="section page-intro"><h1 class="page-intro__title">Каталог товаров</h1><p class="section__description">Клавиатуры, наушники и настольные лампы. Описание и характеристики представлены в карточках товаров.</p><div class="category-nav" aria-label="Категории"><a class="category-nav__link" href="product.html#keyboard">Клавиатуры</a><a class="category-nav__link" href="product.html#headphones">Наушники</a><a class="category-nav__link" href="product.html#lamp">Освещение</a></div></section>
+    <div class="catalog-layout">
+      <aside class="catalog-filters" aria-labelledby="filters-title">
+        <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
+        <p class="catalog-filters__note" id="filter-note">Фильтрация пока недоступна. Все товары представлены ниже.</p>
+        <form class="filters-form" action="catalog.html" method="get" aria-describedby="filter-note">
+          <fieldset class="filters-form__group" disabled><legend class="filters-form__legend">Категория</legend>
+            <label class="filters-form__label" for="category-keys"><input id="category-keys" name="category" type="checkbox" value="keyboard"> Клавиатуры</label>
+            <label class="filters-form__label" for="category-sound"><input id="category-sound" name="category" type="checkbox" value="headphones"> Наушники</label>
+            <label class="filters-form__label" for="category-light"><input id="category-light" name="category" type="checkbox" value="lamp"> Освещение</label>
+          </fieldset>
+          <fieldset class="filters-form__group" disabled><legend class="filters-form__legend">Цена, ₽</legend><label class="filters-form__label" for="price-from">От</label><input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0"><label class="filters-form__label" for="price-to">До</label><input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000"></fieldset>
+          <button class="button button--primary" type="submit" disabled>Применить</button>
+        </form>
+        <a class="catalog-filters__link" href="#comparison">Сравнить товары ↓</a>
+      </aside>
+      <section class="catalog-products" aria-labelledby="products-title"><div class="section__heading"><h2 class="section__title" id="products-title">Все товары</h2><span class="catalog-products__count">3 товара</span></div><div class="products-grid products-grid--catalog">
+        <article class="product-card product-card--featured">
+          <span class="product-card__badge">Хит</span>
+          <a class="product-card__visual" href="product.html#keyboard" aria-label="Подробнее о Study Keys"><img class="product-card__image" src="images/keyboard.jpeg" width="447" height="447" alt="Клавиатура Study Keys — фото" loading="lazy"></a>
+          <p class="product-card__category">Клавиатура</p>
+          <h3 class="product-card__title"><a href="product.html#keyboard">Study Keys</a></h3>
+          <p class="product-card__description">Компактная клавиатура для конспектов, кода и ежедневной работы.</p>
+          <p class="product-card__price">3 490 ₽</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#keyboard">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-order-product="keyboard">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card product-card--new">
+          <span class="product-card__badge">Новинка</span>
+          <a class="product-card__visual" href="product.html#headphones" aria-label="Подробнее о Focus Sound"><img class="product-card__image" src="images/headphones.jpeg" width="447" height="447" alt="Наушники Focus Sound — фото" loading="lazy"></a>
+          <p class="product-card__category">Наушники</p>
+          <h3 class="product-card__title"><a href="product.html#headphones">Focus Sound</a></h3>
+          <p class="product-card__description">Полноразмерные наушники с микрофоном для занятий и созвонов.</p>
+          <p class="product-card__price">4 990 ₽</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#headphones">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-order-product="headphones">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge">Скидка</span>
+          <a class="product-card__visual" href="product.html#lamp" aria-label="Подробнее о Desk Light"><img class="product-card__image" src="images/desk_lamp.jpeg" width="447" height="447" alt="Настольная лампа Desk Light — фото" loading="lazy"></a>
+          <p class="product-card__category">Настольная лампа</p>
+          <h3 class="product-card__title"><a href="product.html#lamp">Desk Light</a></h3>
+          <p class="product-card__description">Мягкий свет и три режима яркости для чтения и работы за столом.</p>
+          <p class="product-card__price">2 490 ₽ <del class="product-card__old-price">2 990 ₽</del></p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#lamp">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-order-product="lamp">Заказать</button>
+          </div>
+        </article>
+      </div></section>
+    </div>
+    <p class="success-message" id="success-message" role="status" tabindex="-1" hidden></p>
+    <section class="section" id="comparison" aria-labelledby="comparison-title"><h2 class="section__title" id="comparison-title">Сравнение товаров</h2><div class="table-wrap" role="region" aria-label="Сравнение товаров" tabindex="0"><table class="product-table"><caption class="product-table__caption">Назначение, подключение и стоимость</caption><thead><tr><th class="product-table__cell" scope="col">Товар</th><th class="product-table__cell" scope="col">Категория</th><th class="product-table__cell" scope="col">Подключение / питание</th><th class="product-table__cell" scope="col">Цена</th></tr></thead><tbody>
+          <tr><th class="product-table__cell" scope="row"><a href="product.html#keyboard">Study Keys</a></th><td class="product-table__cell">Клавиатура</td><td class="product-table__cell">USB-C, проводное</td><td class="product-table__cell">3 490 ₽</td></tr>
+          <tr><th class="product-table__cell" scope="row"><a href="product.html#headphones">Focus Sound</a></th><td class="product-table__cell">Наушники</td><td class="product-table__cell">Bluetooth / кабель 3,5 мм</td><td class="product-table__cell">4 990 ₽</td></tr>
+          <tr><th class="product-table__cell" scope="row"><a href="product.html#lamp">Desk Light</a></th><td class="product-table__cell">Настольная лампа</td><td class="product-table__cell">USB-C, 5 В</td><td class="product-table__cell">2 490 ₽</td></tr>
+        </tbody></table></div></section>
+  </main>
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <div><a class="site-footer__logo" href="index.html">Study Store</a><p class="site-footer__note">Каталог техники для учёбы.</p></div>
+      <nav class="site-footer__nav" aria-label="Разделы главной страницы">
+        <a href="index.html#advantages">Преимущества</a>
+        <a href="index.html#popular">Популярные товары</a>
+        <a href="index.html#faq">Вопросы и ответы</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="site-footer__note">© 2026 · Учебный проект, КР №1.<br>Товары и условия вымышлены. Продажи не осуществляются.</p>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оставить заявку</h2>
+      <form class="order-form" id="order-form" action="order.html" method="get">
+        <p class="order-form__note">Поля со звёздочкой * обязательны. Это учебная форма: данные не отправляются и не сохраняются.</p>
+        <noscript><p class="order-form__note">Для демонстрации отправки включите JavaScript. Не вводите реальные персональные данные.</p></noscript>
+        <div class="order-form__field">
+          <label class="order-form__label" for="selected-product">Товар *</label>
+          <select class="order-form__select" id="selected-product" name="product" required>
+            <option value="">Выберите товар</option>
+            <option value="keyboard">Study Keys — 3 490 ₽</option>
+            <option value="headphones">Focus Sound — 4 990 ₽</option>
+            <option value="lamp">Desk Light — 2 490 ₽</option>
+          </select>
+        </div>
+        <div class="order-form__row">
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-name">Имя *</label>
+            <input class="order-form__input" id="order-name" name="name" type="text" minlength="2" maxlength="60" autocomplete="given-name" placeholder="Например, Алексей" required>
+          </div>
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-email">E-mail *</label>
+            <input class="order-form__input" id="order-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+          </div>
+        </div>
+        <div class="order-form__row">
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-phone">Телефон *</label>
+            <input class="order-form__input" id="order-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="\+7[0-9]{10}" placeholder="+79000000000" aria-describedby="phone-hint" required>
+            <small class="order-form__hint" id="phone-hint">+7 и 10 цифр, без пробелов: +79000000000.</small>
+          </div>
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-date">Удобная дата связи</label>
+            <input class="order-form__input" id="order-date" name="date" type="date">
+          </div>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-topic">Тема заявки *</label>
+          <select class="order-form__select" id="order-topic" name="topic" required>
+            <option value="product">Заказ товара</option>
+            <option value="consultation">Консультация</option>
+            <option value="delivery">Вопрос о доставке</option>
+          </select>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-comment">Комментарий</label>
+          <textarea class="order-form__textarea" id="order-comment" name="comment" rows="3" maxlength="1000" placeholder="Комментарий к заявке"></textarea>
+        </div>
+        <div class="order-form__consent">
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+          <label class="order-form__label" for="order-agreement">Согласен на обработку указанных данных в рамках учебной демонстрации *</label>
+        </div>
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">Отправить заявку</button>
+          <button class="button button--secondary" id="close-order-dialog" type="button">Закрыть</button>
+        </div>
+      </form>
+  </dialog>
+</body>
+</html>

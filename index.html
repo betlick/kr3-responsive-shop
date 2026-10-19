@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study Store: клавиатура, наушники и настольная лампа для удобного рабочего места. Учебный интернет-магазин.">
+  <title>Техника для учёбы — Study Store</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js?v=kr1-final" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Study Store</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" aria-current="page" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">О товарах</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main" id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        
+        <h1 class="hero__title" id="hero-title">Учебный интернет-магазин</h1>
+        <p class="hero__description">В каталоге представлены товары для учёбы: клавиатура, наушники и настольная лампа.</p>
+        <div class="hero__actions"><a class="button button--primary" href="catalog.html">Перейти в каталог</a><a class="button button--secondary" href="#advantages">Преимущества</a></div>
+      </div>
+    </section>
+    <section class="section" id="advantages" aria-labelledby="advantages-title">
+      <div class="section__heading"><div><h2 class="section__title" id="advantages-title">Преимущества магазина</h2></div></div>
+      <div class="benefits">
+        <article class="benefit"><h3 class="benefit__title">Сравнение товаров</h3><p class="benefit__text">В таблице приведены категория, цена и тип подключения.</p><a href="catalog.html#comparison">К сравнению →</a></article>
+        <article class="benefit"><h3 class="benefit__title">Характеристики товаров</h3><p class="benefit__text">У каждого товара есть описание, характеристики и комплектация.</p><a href="product.html">Открыть характеристики →</a></article>
+        <article class="benefit"><h3 class="benefit__title">Форма заявки</h3><p class="benefit__text">При переходе из карточки товар выбирается автоматически. В форме указываются контактные данные и комментарий.</p><a href="order.html">Перейти к форме →</a></article>
+      </div>
+    </section>
+    <section class="section" id="popular" aria-labelledby="popular-title">
+      <div class="section__heading"><div><h2 class="section__title" id="popular-title">Популярные товары</h2></div><a class="section__link" href="catalog.html">Весь каталог →</a></div>
+      <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <span class="product-card__badge">Хит</span>
+          <a class="product-card__visual" href="product.html#keyboard" aria-label="Подробнее о Study Keys"><img class="product-card__image" src="images/keyboard.jpeg" width="447" height="447" alt="Клавиатура Study Keys — фото" loading="lazy"></a>
+          <p class="product-card__category">Клавиатура</p>
+          <h3 class="product-card__title"><a href="product.html#keyboard">Study Keys</a></h3>
+          <p class="product-card__description">Компактная клавиатура для конспектов, кода и ежедневной работы.</p>
+          <p class="product-card__price">3 490 ₽</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#keyboard">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-order-product="keyboard">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card product-card--new">
+          <span class="product-card__badge">Новинка</span>
+          <a class="product-card__visual" href="product.html#headphones" aria-label="Подробнее о Focus Sound">
+            <img
+              src="images/headphones.jpeg"
+              srcset="images/headphones.jpg 480w,
+                      images/headphones.jpg 640w,
+                      headphones.jpg 960w"
+              sizes="(max-width: 639px) 100vw,
+                    (max-width: 1023px) 50vw,
+                    33vw"
+              alt="Наушники Focus Sound - фото"
+              width="640"
+              height="480"
+              loading="lazy"
+              class="product-card__image"
+            >
+          </a>
+          <p class="product-card__category">Наушники</p>
+          <h3 class="product-card__title"><a href="product.html#headphones">Focus Sound</a></h3>
+          <p class="product-card__description">Полноразмерные наушники с микрофоном для занятий и созвонов.</p>
+          <p class="product-card__price">4 990 ₽</p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#headphones">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-order-product="headphones">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge">Скидка</span>
+          <a class="product-card__visual" href="product.html#lamp" aria-label="Подробнее о Desk Light"><img class="product-card__image" src="images/desk_lamp.jpeg" width="447" height="447" alt="Настольная лампа Desk Light — фото" loading="lazy"></a>
+          <p class="product-card__category">Настольная лампа</p>
+          <h3 class="product-card__title"><a href="product.html#lamp">Desk Light</a></h3>
+          <p class="product-card__description">Мягкий свет и три режима яркости для чтения и работы за столом.</p>
+          <p class="product-card__price">2 490 ₽ <del class="product-card__old-price">2 990 ₽</del></p>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#lamp">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-order-product="lamp">Заказать</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <p class="success-message" id="success-message" role="status" tabindex="-1" hidden></p>
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div><h2 class="section__title" id="faq-title">Частые вопросы</h2><p class="section__description">Коротко о товарах и заявке.</p></div>
+      <div class="faq__list">
+        <details class="faq__item"><summary class="faq__question">Можно ли купить товар на сайте?</summary><p class="faq__answer">Это учебный магазин. Товары и цены демонстрационные, оплаты и настоящей отправки заявок нет.</p></details>
+        <details class="faq__item"><summary class="faq__question">Как посмотреть характеристики?</summary><p class="faq__answer">Ссылка «Подробнее» в карточке ведёт на страницу с характеристиками и комплектацией товара.</p></details>
+        <details class="faq__item"><summary class="faq__question">Чем быстрая заявка отличается от страницы заявки?</summary><p class="faq__answer">В модальном окне удобно оставить заявку, не уходя из каталога. На отдельной странице доступна та же форма с подсказками.</p></details>
+      </div>
+    </section>
+    <aside class="callout"><div><h2 class="callout__title">Консультация</h2><p class="callout__text">Вопрос о товаре можно указать в заявке с темой «Консультация».</p></div><a class="button button--primary" href="order.html">Оставить заявку</a></aside>
+  </main>
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <div><a class="site-footer__logo" href="index.html">Study Store</a><p class="site-footer__note">Каталог техники для учёбы.</p></div>
+      <nav class="site-footer__nav" aria-label="Разделы главной страницы">
+        <a href="index.html#advantages">Преимущества</a>
+        <a href="index.html#popular">Популярные товары</a>
+        <a href="index.html#faq">Вопросы и ответы</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="site-footer__note">© 2026 · Учебный проект, КР №1.<br>Товары и условия вымышлены. Продажи не осуществляются.</p>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оставить заявку</h2>
+      <form class="order-form" id="order-form" action="order.html" method="get">
+        <p class="order-form__note">Поля со звёздочкой * обязательны. Это учебная форма: данные не отправляются и не сохраняются.</p>
+        <noscript><p class="order-form__note">Для демонстрации отправки включите JavaScript. Не вводите реальные персональные данные.</p></noscript>
+        <div class="order-form__field">
+          <label class="order-form__label" for="selected-product">Товар *</label>
+          <select class="order-form__select" id="selected-product" name="product" required>
+            <option value="">Выберите товар</option>
+            <option value="keyboard">Study Keys — 3 490 ₽</option>
+            <option value="headphones">Focus Sound — 4 990 ₽</option>
+            <option value="lamp">Desk Light — 2 490 ₽</option>
+          </select>
+        </div>
+        <div class="order-form__row">
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-name">Имя *</label>
+            <input class="order-form__input" id="order-name" name="name" type="text" minlength="2" maxlength="60" autocomplete="given-name" placeholder="Например, Алексей" required>
+          </div>
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-email">E-mail *</label>
+            <input class="order-form__input" id="order-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+          </div>
+        </div>
+        <div class="order-form__row">
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-phone">Телефон *</label>
+            <input class="order-form__input" id="order-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="\+7[0-9]{10}" placeholder="+79000000000" aria-describedby="phone-hint" required>
+            <small class="order-form__hint" id="phone-hint">+7 и 10 цифр, без пробелов: +79000000000.</small>
+          </div>
+          <div class="order-form__field">
+            <label class="order-form__label" for="order-date">Удобная дата связи</label>
+            <input class="order-form__input" id="order-date" name="date" type="date">
+          </div>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-topic">Тема заявки *</label>
+          <select class="order-form__select" id="order-topic" name="topic" required>
+            <option value="product">Заказ товара</option>
+            <option value="consultation">Консультация</option>
+            <option value="delivery">Вопрос о доставке</option>
+          </select>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-comment">Комментарий</label>
+          <textarea class="order-form__textarea" id="order-comment" name="comment" rows="3" maxlength="1000" placeholder="Комментарий к заявке"></textarea>
+        </div>
+        <div class="order-form__consent">
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+          <label class="order-form__label" for="order-agreement">Согласен на обработку указанных данных в рамках учебной демонстрации *</label>
+        </div>
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">Отправить заявку</button>
+          <button class="button button--secondary" id="close-order-dialog" type="button">Закрыть</button>
+        </div>
+      </form>
+  </dialog>
+</body>
+</html>
