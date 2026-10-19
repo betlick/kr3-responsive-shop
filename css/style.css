@@ -18,7 +18,7 @@
 }
 
 /* Базовые стили. */
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 /* Плавные переходы по якорям, включая ссылку «Наверх». */
 html { scroll-behavior: smooth; }
 body {
@@ -110,7 +110,7 @@ h1, h2, h3 { margin-top: 0; }
 
 /* Главная: обычный вводный блок, преимущества и вопросы. */
 .hero { padding: var(--space-lg); margin-bottom: var(--space-xl); background-color: #eef5ff; }
-.benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+.benefits { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
 .benefit { padding: var(--space-md); border: 1px solid var(--color-border); }
 .section__heading { margin-bottom: var(--space-md); }
 .faq__item { margin-top: var(--space-sm); padding: var(--space-md); border: 1px solid var(--color-border); }
@@ -119,8 +119,8 @@ h1, h2, h3 { margin-top: 0; }
 .faq__answer { margin-bottom: 0; }
 .callout { padding: var(--space-lg); background-color: var(--color-surface); }
 
-/* Три карточки в ряд через Grid. Flex внутри карточки выравнивает кнопки. */
-.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+/* Grid задаёт сетку карточек. Flex внутри выравнивает кнопки. */
+.products-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
 .product-card {
   position: relative;
   display: flex;
@@ -154,14 +154,13 @@ h1, h2, h3 { margin-top: 0; }
 /* Каталог: фильтр слева, товары справа. */
 .catalog-layout {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-lg);
   align-items: start;
   margin-bottom: var(--space-xl);
 }
 .catalog-filters {
-  position: sticky;
-  top: var(--space-lg);
+  position: static;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   background-color: var(--color-surface);
@@ -177,19 +176,20 @@ h1, h2, h3 { margin-top: 0; }
 /* Фото и описание — две колонки, таблица занимает обе колонки ниже. */
 .product-detail {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-lg);
   align-items: start;
   margin-bottom: var(--space-xl);
   padding: var(--space-lg);
   border: 1px solid var(--color-border);
 }
-.product-detail > .product-table { grid-column: 1 / -1; margin-top: 0; }
+.product-detail > .table-wrapper { grid-column: 1 / -1; }
+.product-detail .product-table { margin-top: 0; }
 .product-detail__image { width: 100%; max-width: 280px; margin-bottom: var(--space-md); }
 .product-detail__tag { color: var(--color-primary); }
 .product-detail__price { font-weight: 700; }
 .product-detail__availability { color: var(--color-success); }
-.table-wrap { overflow-x: auto; }
+
 .product-table { width: 100%; margin-top: var(--space-lg); border-collapse: collapse; text-align: left; }
 .product-table__caption { margin-bottom: var(--space-sm); text-align: left; font-weight: 700; }
 .product-table__cell { padding: var(--space-sm); border: 1px solid var(--color-border); }
@@ -244,11 +244,6 @@ h1, h2, h3 { margin-top: 0; }
 .skip-link { position: fixed; top: -100px; left: var(--space-md); z-index: 20; padding: var(--space-sm); background-color: white; }
 .skip-link:focus { top: var(--space-sm); }
 
-/* На небольшом экране карточки и каталог становятся одной колонкой. */
-@media (max-width: 800px) {
-  .products-grid, .benefits, .catalog-layout, .product-detail { grid-template-columns: 1fr; }
-  .catalog-filters { position: static; }
-}
 
 /* Если в системе отключены анимации, переходы по якорям мгновенные. */
 @media (prefers-reduced-motion: reduce) {
