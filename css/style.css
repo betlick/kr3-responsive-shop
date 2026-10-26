@@ -241,8 +241,23 @@ h1, h2, h3 { margin-top: 0; }
   text-decoration: none;
 }
 .back-to-top:hover { color: white; background-color: var(--color-primary-dark); }
-.skip-link { position: fixed; top: -100px; left: var(--space-md); z-index: 20; padding: var(--space-sm); background-color: white; }
-.skip-link:focus { top: var(--space-sm); }
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 1000;
+  padding: 8px 12px;
+  color: #ffffff;
+  background-color: #111111;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+}
 
 
 /* Если в системе отключены анимации, переходы по якорям мгновенные. */
