@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Форма заявки Study Store: выбор товара, контактные данные, тема обращения и комментарий."
-    >
-    <title>Оформление заявки — Study Store</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/main.js" defer></script>
+      content="Beat Store: каталог битов, прослушивание и заявка на покупку."
+    />
+    <title>Оформление заявки — Beat Store</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css?v=player-layout-2" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/beat-theme.css?v=player-layout-2" />
+    <script src="js/main.js?v=player-layout-2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
     <header class="site-header" id="top">
       <div class="site-header__inner">
-        <a class="site-header__logo" href="index.html">Study Store</a>
+        <a class="site-header__logo" href="index.html">Beat Store</a>
         <nav class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -27,10 +28,15 @@
               <a class="site-nav__link" href="catalog.html">Каталог</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="product.html">О товарах</a>
+              <a class="site-nav__link" href="product.html">О битах</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--active" aria-current="page" href="order.html">Заявка</a>
+              <a
+                class="site-nav__link site-nav__link--active"
+                aria-current="page"
+                href="order.html"
+                >Заявка</a
+              >
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html">Контакты</a>
@@ -46,23 +52,50 @@
       </nav>
       <section class="section page-intro">
         <h1 class="page-intro__title">Оставить заявку</h1>
-        <p class="section__description">Форма заявки на товар или консультацию. Поля со звёздочкой обязательны.</p>
+        <p class="section__description">
+          Форма заявки на бит или консультацию. Поля со звёздочкой обязательны.
+        </p>
       </section>
       <div class="order-layout">
         <section class="order-panel" aria-labelledby="form-title">
-          <h2 class="order-panel__title" id="form-title">Товар и контакты</h2>
-          <form class="order-form" id="order-form" action="order.html" method="get">
-            <p class="order-form__note order-form__field--wide">Поля со звёздочкой * обязательны.</p>
+          <h2 class="order-panel__title" id="form-title">Бит и контакты</h2>
+          <form
+            class="order-form"
+            id="order-form"
+            action="order.html"
+            method="get"
+          >
+            <p class="order-form__note order-form__field--wide">
+              Поля со звёздочкой * обязательны.
+            </p>
             <noscript class="order-form__field--wide">
-              <p class="order-form__note">Для проверки формы без перезагрузки страницы включите JavaScript.</p>
+              <p class="order-form__note">
+                Для проверки формы без перезагрузки страницы включите
+                JavaScript.
+              </p>
             </noscript>
             <div class="order-form__field order-form__field--wide">
-              <label class="order-form__label" for="selected-product">Товар *</label>
-              <select class="order-form__select" id="selected-product" name="product" required>
-                <option value="">Выберите товар</option>
-                <option value="keyboard">Study Keys — 3 490 ₽</option>
-                <option value="headphones">Focus Sound — 4 990 ₽</option>
-                <option value="lamp">Desk Light — 2 490 ₽</option>
+              <label class="order-form__label" for="selected-product"
+                >Бит *</label
+              >
+              <select
+                class="order-form__select"
+                id="selected-product"
+                name="product"
+                required
+              >
+                <option value="">Выберите бит</option>
+                <option value="beat-01">
+                  nine vicious sample type beat - "wokeuplikethis" — цена по
+                  запросу
+                </option>
+                <option value="beat-02">
+                  nine vicious sample type beat - "do i clench my fists?" — цена
+                  по запросу
+                </option>
+                <option value="beat-03">
+                  tana + untiljapan type beat - "finewine" — цена по запросу
+                </option>
               </select>
             </div>
             <div class="order-form__field">
@@ -77,10 +110,12 @@
                 autocomplete="given-name"
                 placeholder="Например, Алексей"
                 required
-              >
+              />
             </div>
             <div class="order-form__field">
-              <label class="order-form__label" for="order-email">E-mail *</label>
+              <label class="order-form__label" for="order-email"
+                >E-mail *</label
+              >
               <input
                 class="order-form__input"
                 id="order-email"
@@ -89,10 +124,12 @@
                 autocomplete="email"
                 placeholder="name@example.com"
                 required
-              >
+              />
             </div>
             <div class="order-form__field">
-              <label class="order-form__label" for="order-phone">Телефон *</label>
+              <label class="order-form__label" for="order-phone"
+                >Телефон *</label
+              >
               <input
                 class="order-form__input"
                 id="order-phone"
@@ -104,23 +141,41 @@
                 placeholder="+79000000000"
                 aria-describedby="phone-hint"
                 required
+              />
+              <small class="order-form__hint" id="phone-hint"
+                >+7 и 10 цифр, без пробелов: +79000000000.</small
               >
-              <small class="order-form__hint" id="phone-hint">+7 и 10 цифр, без пробелов: +79000000000.</small>
             </div>
             <div class="order-form__field">
-              <label class="order-form__label" for="order-date">Удобная дата связи</label>
-              <input class="order-form__input" id="order-date" name="date" type="date">
+              <label class="order-form__label" for="order-date"
+                >Удобная дата связи</label
+              >
+              <input
+                class="order-form__input"
+                id="order-date"
+                name="date"
+                type="date"
+              />
             </div>
             <div class="order-form__field order-form__field--wide">
-              <label class="order-form__label" for="order-topic">Тема заявки *</label>
-              <select class="order-form__select" id="order-topic" name="topic" required>
-                <option value="product">Заказ товара</option>
+              <label class="order-form__label" for="order-topic"
+                >Тема заявки *</label
+              >
+              <select
+                class="order-form__select"
+                id="order-topic"
+                name="topic"
+                required
+              >
+                <option value="product">Заказ бита</option>
                 <option value="consultation">Консультация</option>
-                <option value="delivery">Вопрос о доставке</option>
+                <option value="delivery">Условия лицензии</option>
               </select>
             </div>
             <div class="order-form__field order-form__field--wide">
-              <label class="order-form__label" for="order-comment">Комментарий</label>
+              <label class="order-form__label" for="order-comment"
+                >Комментарий</label
+              >
               <textarea
                 class="order-form__textarea"
                 id="order-comment"
@@ -137,43 +192,59 @@
                 name="agreement"
                 type="checkbox"
                 required
+              />
+              <label class="order-form__label" for="order-agreement"
+                >Согласен на обработку указанных данных *</label
               >
-              <label class="order-form__label" for="order-agreement">Согласен на обработку указанных данных *</label>
             </div>
             <div class="order-form__actions order-form__field--wide">
-              <button class="button button--primary" type="submit">Отправить заявку</button>
-              <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+              <button class="button button--primary" type="submit">
+                Отправить заявку
+              </button>
+              <a class="button button--secondary" href="catalog.html"
+                >Вернуться в каталог</a
+              >
             </div>
           </form>
-          <p class="success-message" id="success-message" role="status" tabindex="-1" hidden></p>
+          <p
+            class="success-message"
+            id="success-message"
+            role="status"
+            tabindex="-1"
+            hidden
+          ></p>
         </section>
         <aside class="order-help">
           <h2 class="order-help__title">Порядок оформления заявки</h2>
           <ol class="order-help__steps">
-            <li>Выберите товар или перейдите к форме из его карточки.</li>
+            <li>Выберите бит или перейдите к форме из его карточки.</li>
             <li>Укажите контактные данные и комментарий при необходимости.</li>
             <li>Нажмите «Отправить заявку» для проверки введённых данных.</li>
           </ol>
-          <p class="order-help__note">Результат проверки заполненных полей появится на странице.</p>
-          <a href="catalog.html#comparison">Сначала сравнить товары →</a>
+          <p class="order-help__note">
+            Результат проверки заполненных полей появится на странице.
+          </p>
+          <a href="catalog.html#comparison">Сначала сравнить биты →</a>
         </aside>
       </div>
     </main>
     <footer class="site-footer" id="contacts">
       <div class="site-footer__inner">
         <div>
-          <a class="site-footer__logo" href="index.html">Study Store</a>
-          <p class="site-footer__note">Каталог техники для учёбы.</p>
+          <a class="site-footer__logo" href="index.html">Beat Store</a>
+          <p class="site-footer__note">Каталог битов.</p>
         </div>
         <nav class="site-footer__nav" aria-label="Разделы главной страницы">
           <a href="index.html#advantages">Преимущества</a>
-          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#popular">Популярные биты</a>
           <a href="index.html#faq">Вопросы и ответы</a>
           <a href="contacts.html">Контакты</a>
         </nav>
-        <p class="site-footer__note">© 2026 Study Store.</p>
+        <p class="site-footer__note">© 2026 Beat Store.</p>
       </div>
     </footer>
-    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх"
+      >↑ Наверх</a
+    >
   </body>
 </html>

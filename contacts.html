@@ -1,22 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Контакты магазина Study Store, ссылка на форму заявки и ответы на частые вопросы."
-    >
-    <title>Контакты и обратная связь — Study Store</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+      content="Beat Store: каталог битов, прослушивание и заявка на покупку."
+    />
+    <title>Контакты и обратная связь — Beat Store</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css?v=player-layout-2" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/beat-theme.css?v=player-layout-2" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
     <header class="site-header" id="top">
       <div class="site-header__inner">
-        <a class="site-header__logo" href="index.html">Study Store</a>
+        <a class="site-header__logo" href="index.html">Beat Store</a>
         <nav class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -26,13 +27,18 @@
               <a class="site-nav__link" href="catalog.html">Каталог</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="product.html">О товарах</a>
+              <a class="site-nav__link" href="product.html">О битах</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="order.html">Заявка</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--active" aria-current="page" href="contacts.html">Контакты</a>
+              <a
+                class="site-nav__link site-nav__link--active"
+                aria-current="page"
+                href="contacts.html"
+                >Контакты</a
+              >
             </li>
           </ul>
         </nav>
@@ -45,31 +51,50 @@
       </nav>
       <section class="section page-intro">
         <h1 class="page-intro__title">Контакты</h1>
-        <p class="section__description">Тему обращения и комментарий можно указать на странице заявки.</p>
+        <p class="section__description">
+          Тему обращения и комментарий можно указать на странице заявки.
+        </p>
       </section>
       <div class="contact-grid">
         <section class="contact-card" aria-labelledby="contact-title">
-          <h2 class="contact-card__title" id="contact-title">Связаться с нами</h2>
+          <h2 class="contact-card__title" id="contact-title">
+            Связаться с нами
+          </h2>
           <address class="contact-card__address">
             <p class="contact-card__label">Электронная почта</p>
             <a href="mailto:info@example.com">info@example.com</a>
             <p class="contact-card__label">Телефон</p>
             <a href="tel:+79000000000">+7 (900) 000-00-00</a>
-            <p class="contact-card__label">Адрес</p>
-            <p>Пункт выдачи пока не открыт.</p>
+            <p class="contact-card__label">Формат работы</p>
+            <p>Обсуждение покупки проходит онлайн.</p>
           </address>
         </section>
-        <section class="contact-card contact-card--accent" id="feedback" aria-labelledby="feedback-title">
-          <h2 class="contact-card__title" id="feedback-title">Обратная связь</h2>
-          <p>На странице заявки можно выбрать тему «Консультация» или «Вопрос о доставке» и написать комментарий.</p>
-          <a class="button button--primary" href="order.html">Перейти к форме</a>
-          <a class="contact-card__link" href="index.html#faq">Частые вопросы →</a>
+        <section
+          class="contact-card contact-card--accent"
+          id="feedback"
+          aria-labelledby="feedback-title"
+        >
+          <h2 class="contact-card__title" id="feedback-title">
+            Обратная связь
+          </h2>
+          <p>
+            На странице заявки можно выбрать тему «Консультация» или «Условия
+            лицензии» и написать комментарий.
+          </p>
+          <a class="button button--primary" href="order.html"
+            >Перейти к форме</a
+          >
+          <a class="contact-card__link" href="index.html#faq"
+            >Частые вопросы →</a
+          >
         </section>
       </div>
       <aside class="callout">
         <div>
           <h2 class="callout__title">О проекте</h2>
-          <p class="callout__text">Study Store — каталог техники для учёбы и рабочего места.</p>
+          <p class="callout__text">
+            Beat Store — каталог битов для записи музыки.
+          </p>
         </div>
         <a class="button button--secondary" href="catalog.html">В каталог</a>
       </aside>
@@ -77,18 +102,20 @@
     <footer class="site-footer" id="contacts">
       <div class="site-footer__inner">
         <div>
-          <a class="site-footer__logo" href="index.html">Study Store</a>
-          <p class="site-footer__note">Каталог техники для учёбы.</p>
+          <a class="site-footer__logo" href="index.html">Beat Store</a>
+          <p class="site-footer__note">Каталог битов.</p>
         </div>
         <nav class="site-footer__nav" aria-label="Разделы главной страницы">
           <a href="index.html#advantages">Преимущества</a>
-          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#popular">Популярные биты</a>
           <a href="index.html#faq">Вопросы и ответы</a>
           <a href="contacts.html">Контакты</a>
         </nav>
-        <p class="site-footer__note">© 2026 Study Store.</p>
+        <p class="site-footer__note">© 2026 Beat Store.</p>
       </div>
     </footer>
-    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх"
+      >↑ Наверх</a
+    >
   </body>
 </html>

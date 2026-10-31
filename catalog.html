@@ -1,33 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Каталог Study Store: три категории техники, цены, карточки товаров и таблица сравнения."
-    >
-    <title>Каталог товаров — Study Store</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/main.js" defer></script>
+      content="Beat Store: каталог битов, прослушивание и заявка на покупку."
+    />
+    <title>Каталог битов — Beat Store</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css?v=player-layout-2" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/beat-theme.css?v=player-layout-2" />
+    <script src="js/main.js?v=player-layout-2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
     <header class="site-header" id="top">
       <div class="site-header__inner">
-        <a class="site-header__logo" href="index.html">Study Store</a>
+        <a class="site-header__logo" href="index.html">Beat Store</a>
         <nav class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a class="site-nav__link" href="index.html">Главная</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--active" aria-current="page" href="catalog.html">Каталог</a>
+              <a
+                class="site-nav__link site-nav__link--active"
+                aria-current="page"
+                href="catalog.html"
+                >Каталог</a
+              >
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="product.html">О товарах</a>
+              <a class="site-nav__link" href="product.html">О битах</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="order.html">Заявка</a>
@@ -45,27 +51,60 @@
         <span class="breadcrumbs__current" aria-current="page">Каталог</span>
       </nav>
       <section class="section page-intro">
-        <h1 class="page-intro__title">Каталог товаров</h1>
-        <p class="section__description">Клавиатуры, наушники и настольные лампы. Описание и характеристики представлены в карточках товаров.</p>
+        <h1 class="page-intro__title">Каталог битов</h1>
+        <p class="section__description">
+          Прослушайте биты в каталоге и выберите подходящий для записи.
+        </p>
         <nav class="category-nav" aria-label="Категории">
-          <a class="category-nav__link" href="product.html#keyboard">Клавиатуры</a>
-          <a class="category-nav__link" href="product.html#headphones">Наушники</a>
-          <a class="category-nav__link" href="product.html#lamp">Освещение</a>
+          <a class="category-nav__link" href="product.html#beat-01"
+            >nine vicious sample type beat - "wokeuplikethis"</a
+          >
+          <a class="category-nav__link" href="product.html#beat-02"
+            >nine vicious sample type beat - "do i clench my fists?"</a
+          >
+          <a class="category-nav__link" href="product.html#beat-03"
+            >tana + untiljapan type beat - "finewine"</a
+          >
         </nav>
       </section>
       <div class="catalog-layout">
         <aside class="catalog-filters" aria-labelledby="filters-title">
           <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
-          <p class="catalog-filters__note" id="filter-note">Фильтрация пока недоступна. Все товары представлены ниже.</p>
-          <form class="filters-form" action="catalog.html" method="get" aria-describedby="filter-note">
+          <p class="catalog-filters__note" id="filter-note">
+            Фильтрация пока недоступна. Все биты представлены ниже.
+          </p>
+          <form
+            class="filters-form"
+            action="catalog.html"
+            method="get"
+            aria-describedby="filter-note"
+          >
             <fieldset class="filters-form__group" disabled>
               <legend class="filters-form__legend">Категория</legend>
               <label class="filters-form__label" for="category-keys">
-                <input id="category-keys" name="category" type="checkbox" value="keyboard"> Клавиатуры</label>
+                <input
+                  id="category-keys"
+                  name="category"
+                  type="checkbox"
+                  value="beat-01"
+                />nine vicious sample type beat - "wokeuplikethis"</label
+              >
               <label class="filters-form__label" for="category-sound">
-                <input id="category-sound" name="category" type="checkbox" value="headphones"> Наушники</label>
+                <input
+                  id="category-sound"
+                  name="category"
+                  type="checkbox"
+                  value="beat-02"
+                />nine vicious sample type beat - "do i clench my fists?"</label
+              >
               <label class="filters-form__label" for="category-light">
-                <input id="category-light" name="category" type="checkbox" value="lamp"> Освещение</label>
+                <input
+                  id="category-light"
+                  name="category"
+                  type="checkbox"
+                  value="beat-03"
+                />tana + untiljapan type beat - "finewine"</label
+              >
             </fieldset>
             <fieldset class="filters-form__group" disabled>
               <legend class="filters-form__legend">Цена, ₽</legend>
@@ -77,7 +116,7 @@
                 type="number"
                 min="0"
                 placeholder="0"
-              >
+              />
               <label class="filters-form__label" for="price-to">До</label>
               <input
                 class="filters-form__input"
@@ -86,160 +125,215 @@
                 type="number"
                 min="0"
                 placeholder="5000"
-              >
+              />
             </fieldset>
-            <button class="button button--primary" type="submit" disabled>Применить</button>
+            <button class="button button--primary" type="submit" disabled>
+              Применить
+            </button>
           </form>
-          <a class="catalog-filters__link" href="#comparison">Сравнить товары ↓</a>
+          <a class="catalog-filters__link" href="#comparison"
+            >Сравнить биты ↓</a
+          >
         </aside>
         <section class="catalog-products" aria-labelledby="products-title">
           <div class="section__heading">
-            <h2 class="section__title" id="products-title">Все товары</h2>
-            <span class="catalog-products__count">3 товара</span>
+            <h2 class="section__title" id="products-title">Все биты</h2>
+            <span class="catalog-products__count">3 бита</span>
           </div>
           <div class="products-grid products-grid--catalog">
             <article class="product-card product-card--featured">
-              <span class="product-card__badge">Хит</span>
-              <a
-                class="product-card__visual"
-                href="product.html#keyboard"
-                aria-label="Подробнее о Study Keys"
-              >
-                <img
-                  class="product-card__image"
-                  src="images/keyboard.jpeg"
-                  width="447"
-                  height="447"
-                  alt="Клавиатура Study Keys — фото"
+              <div class="beat-preview">
+                <iframe
+                  class="beat-player"
+                  src="https://www.youtube-nocookie.com/embed/kIURX1Ku31Y"
+                  title='Прослушать nine vicious sample type beat - "wokeuplikethis"'
                   loading="lazy"
-                  srcset="images/keyboard-240.jpeg 240w, images/keyboard.jpeg 447w"
-                  sizes="(min-width: 1280px) 230px, (max-width: 305px) calc(100vw - 66px), 240px"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="encrypted-media; picture-in-picture; fullscreen"
+                  allowfullscreen
+                ></iframe>
+                <a
+                  href="https://www.youtube.com/watch?v=kIURX1Ku31Y"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Открыть nine vicious sample type beat - "wokeuplikethis" на
+                  YouTube (новая вкладка)</a
                 >
-              </a>
-              <p class="product-card__category">Клавиатура</p>
+              </div>
+              <p class="product-card__category">Бит</p>
               <h3 class="product-card__title">
-                <a href="product.html#keyboard">Study Keys</a>
+                <a href="product.html#beat-01"
+                  >nine vicious sample type beat - "wokeuplikethis"</a
+                >
               </h3>
-              <p class="product-card__description">Компактная клавиатура для конспектов, кода и ежедневной работы.</p>
-              <p class="product-card__price">3 490 ₽</p>
+              <p class="product-card__description">
+                Прослушивание доступно в плеере. Стоимость и условия
+                использования уточняются при обращении.
+              </p>
+              <p class="product-card__price">Цена по запросу</p>
               <div class="product-card__actions">
-                <a class="button button--secondary" href="product.html#keyboard">Подробнее</a>
+                <a class="button button--secondary" href="product.html#beat-01"
+                  >Подробнее</a
+                >
                 <button
                   class="button button--primary product-card__button"
                   type="button"
-                  data-order-product="keyboard"
-                >Заказать</button>
+                  data-order-product="beat-01"
+                >
+                  Заказать
+                </button>
               </div>
             </article>
             <article class="product-card product-card--new">
-              <span class="product-card__badge">Новинка</span>
-              <a
-                class="product-card__visual"
-                href="product.html#headphones"
-                aria-label="Подробнее о Focus Sound"
-              >
-                <img
-                  class="product-card__image"
-                  src="images/headphones.jpeg"
-                  width="447"
-                  height="447"
-                  alt="Наушники Focus Sound — фото"
+              <div class="beat-preview">
+                <iframe
+                  class="beat-player"
+                  src="https://www.youtube.com/embed/oRbOh9WSYxc"
+                  title='Прослушать nine vicious sample type beat - "do i clench my fists?"'
                   loading="lazy"
-                  srcset="images/headphones-240.jpeg 240w, images/headphones.jpeg 447w"
-                  sizes="(min-width: 1280px) 230px, (max-width: 305px) calc(100vw - 66px), 240px"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="encrypted-media; picture-in-picture; fullscreen"
+                  allowfullscreen
+                ></iframe>
+                <a
+                  href="https://www.youtube.com/watch?v=oRbOh9WSYxc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Открыть nine vicious sample type beat - "do i clench my
+                  fists?" на YouTube (новая вкладка)</a
                 >
-              </a>
-              <p class="product-card__category">Наушники</p>
+              </div>
+              <p class="product-card__category">Бит</p>
               <h3 class="product-card__title">
-                <a href="product.html#headphones">Focus Sound</a>
+                <a href="product.html#beat-02"
+                  >nine vicious sample type beat - "do i clench my fists?"</a
+                >
               </h3>
-              <p class="product-card__description">Полноразмерные наушники с микрофоном для занятий и созвонов.</p>
-              <p class="product-card__price">4 990 ₽</p>
+              <p class="product-card__description">
+                Прослушивание доступно в плеере. Стоимость и условия
+                использования уточняются при обращении.
+              </p>
+              <p class="product-card__price">Цена по запросу</p>
               <div class="product-card__actions">
-                <a class="button button--secondary" href="product.html#headphones">Подробнее</a>
+                <a class="button button--secondary" href="product.html#beat-02"
+                  >Подробнее</a
+                >
                 <button
                   class="button button--primary product-card__button"
                   type="button"
-                  data-order-product="headphones"
-                >Заказать</button>
+                  data-order-product="beat-02"
+                >
+                  Заказать
+                </button>
               </div>
             </article>
             <article class="product-card product-card--discount">
-              <span class="product-card__badge">Скидка</span>
-              <a class="product-card__visual" href="product.html#lamp" aria-label="Подробнее о Desk Light">
-                <img
-                  class="product-card__image"
-                  src="images/desk_lamp.jpeg"
-                  width="447"
-                  height="447"
-                  alt="Настольная лампа Desk Light — фото"
+              <div class="beat-preview">
+                <iframe
+                  class="beat-player"
+                  src="https://www.youtube-nocookie.com/embed/LorADAaQas0"
+                  title='Прослушать tana + untiljapan type beat - "finewine"'
                   loading="lazy"
-                  srcset="images/desk_lamp-240.jpeg 240w, images/desk_lamp.jpeg 447w"
-                  sizes="(min-width: 1280px) 230px, (max-width: 305px) calc(100vw - 66px), 240px"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="encrypted-media; picture-in-picture; fullscreen"
+                  allowfullscreen
+                ></iframe>
+                <a
+                  href="https://www.youtube.com/watch?v=LorADAaQas0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Открыть tana + untiljapan type beat - "finewine" на YouTube
+                  (новая вкладка)</a
                 >
-              </a>
-              <p class="product-card__category">Настольная лампа</p>
+              </div>
+              <p class="product-card__category">Бит</p>
               <h3 class="product-card__title">
-                <a href="product.html#lamp">Desk Light</a>
+                <a href="product.html#beat-03"
+                  >tana + untiljapan type beat - "finewine"</a
+                >
               </h3>
-              <p class="product-card__description">Мягкий свет и три режима яркости для чтения и работы за столом.</p>
-              <p class="product-card__price">2 490 ₽ <del class="product-card__old-price">2 990 ₽</del>
+              <p class="product-card__description">
+                Прослушивание доступно в плеере. Стоимость и условия
+                использования уточняются при обращении.
               </p>
+              <p class="product-card__price">Цена по запросу</p>
               <div class="product-card__actions">
-                <a class="button button--secondary" href="product.html#lamp">Подробнее</a>
+                <a class="button button--secondary" href="product.html#beat-03"
+                  >Подробнее</a
+                >
                 <button
                   class="button button--primary product-card__button"
                   type="button"
-                  data-order-product="lamp"
-                >Заказать</button>
+                  data-order-product="beat-03"
+                >
+                  Заказать
+                </button>
               </div>
             </article>
           </div>
         </section>
       </div>
-      <p class="success-message" id="success-message" role="status" tabindex="-1" hidden></p>
-      <section class="section" id="comparison" aria-labelledby="comparison-title">
-        <h2 class="section__title" id="comparison-title">Сравнение товаров</h2>
+      <p
+        class="success-message"
+        id="success-message"
+        role="status"
+        tabindex="-1"
+        hidden
+      ></p>
+      <section
+        class="section"
+        id="comparison"
+        aria-labelledby="comparison-title"
+      >
+        <h2 class="section__title" id="comparison-title">Сравнение битов</h2>
         <div
           class="table-wrapper"
           role="region"
-          aria-label="Назначение, подключение и стоимость"
+          aria-label="Прослушивание и стоимость"
           tabindex="0"
         >
           <table class="product-table">
-            <caption class="product-table__caption">Назначение, подключение и стоимость</caption>
+            <caption class="product-table__caption">
+              Прослушивание и стоимость
+            </caption>
             <thead>
               <tr>
-                <th class="product-table__cell" scope="col">Товар</th>
+                <th class="product-table__cell" scope="col">Бит</th>
                 <th class="product-table__cell" scope="col">Категория</th>
-                <th class="product-table__cell" scope="col">Подключение / питание</th>
+                <th class="product-table__cell" scope="col">Прослушивание</th>
                 <th class="product-table__cell" scope="col">Цена</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th class="product-table__cell" scope="row">
-                  <a href="product.html#keyboard">Study Keys</a>
+                  <a href="product.html#beat-01"
+                    >nine vicious sample type beat - "wokeuplikethis"</a
+                  >
                 </th>
-                <td class="product-table__cell">Клавиатура</td>
-                <td class="product-table__cell">USB-C, проводное</td>
-                <td class="product-table__cell">3 490 ₽</td>
+                <td class="product-table__cell">Бит</td>
+                <td class="product-table__cell">YouTube</td>
+                <td class="product-table__cell">По запросу</td>
               </tr>
               <tr>
                 <th class="product-table__cell" scope="row">
-                  <a href="product.html#headphones">Focus Sound</a>
+                  <a href="product.html#beat-02"
+                    >nine vicious sample type beat - "do i clench my fists?"</a
+                  >
                 </th>
-                <td class="product-table__cell">Наушники</td>
-                <td class="product-table__cell">Bluetooth / кабель 3,5 мм</td>
-                <td class="product-table__cell">4 990 ₽</td>
+                <td class="product-table__cell">Бит</td>
+                <td class="product-table__cell">YouTube</td>
+                <td class="product-table__cell">По запросу</td>
               </tr>
               <tr>
                 <th class="product-table__cell" scope="row">
-                  <a href="product.html#lamp">Desk Light</a>
+                  <a href="product.html#beat-03"
+                    >tana + untiljapan type beat - "finewine"</a
+                  >
                 </th>
-                <td class="product-table__cell">Настольная лампа</td>
-                <td class="product-table__cell">USB-C, 5 В</td>
-                <td class="product-table__cell">2 490 ₽</td>
+                <td class="product-table__cell">Бит</td>
+                <td class="product-table__cell">YouTube</td>
+                <td class="product-table__cell">По запросу</td>
               </tr>
             </tbody>
           </table>
@@ -249,33 +343,57 @@
     <footer class="site-footer" id="contacts">
       <div class="site-footer__inner">
         <div>
-          <a class="site-footer__logo" href="index.html">Study Store</a>
-          <p class="site-footer__note">Каталог техники для учёбы.</p>
+          <a class="site-footer__logo" href="index.html">Beat Store</a>
+          <p class="site-footer__note">Каталог битов.</p>
         </div>
         <nav class="site-footer__nav" aria-label="Разделы главной страницы">
           <a href="index.html#advantages">Преимущества</a>
-          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#popular">Популярные биты</a>
           <a href="index.html#faq">Вопросы и ответы</a>
           <a href="contacts.html">Контакты</a>
         </nav>
-        <p class="site-footer__note">© 2026 Study Store.</p>
+        <p class="site-footer__note">© 2026 Beat Store.</p>
       </div>
     </footer>
-    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑ Наверх</a>
-    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-      <h2 class="order-dialog__title" id="order-dialog-title">Оставить заявку</h2>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх"
+      >↑ Наверх</a
+    >
+    <dialog
+      class="order-dialog"
+      id="order-dialog"
+      aria-labelledby="order-dialog-title"
+    >
+      <h2 class="order-dialog__title" id="order-dialog-title">
+        Оставить заявку
+      </h2>
       <form class="order-form" id="order-form" action="order.html" method="get">
-        <p class="order-form__note order-form__field--wide">Поля со звёздочкой * обязательны.</p>
+        <p class="order-form__note order-form__field--wide">
+          Поля со звёздочкой * обязательны.
+        </p>
         <noscript class="order-form__field--wide">
-          <p class="order-form__note">Для проверки формы без перезагрузки страницы включите JavaScript.</p>
+          <p class="order-form__note">
+            Для проверки формы без перезагрузки страницы включите JavaScript.
+          </p>
         </noscript>
         <div class="order-form__field order-form__field--wide">
-          <label class="order-form__label" for="selected-product">Товар *</label>
-          <select class="order-form__select" id="selected-product" name="product" required>
-            <option value="">Выберите товар</option>
-            <option value="keyboard">Study Keys — 3 490 ₽</option>
-            <option value="headphones">Focus Sound — 4 990 ₽</option>
-            <option value="lamp">Desk Light — 2 490 ₽</option>
+          <label class="order-form__label" for="selected-product">Бит *</label>
+          <select
+            class="order-form__select"
+            id="selected-product"
+            name="product"
+            required
+          >
+            <option value="">Выберите бит</option>
+            <option value="beat-01">
+              nine vicious sample type beat - "wokeuplikethis" — цена по запросу
+            </option>
+            <option value="beat-02">
+              nine vicious sample type beat - "do i clench my fists?" — цена по
+              запросу
+            </option>
+            <option value="beat-03">
+              tana + untiljapan type beat - "finewine" — цена по запросу
+            </option>
           </select>
         </div>
         <div class="order-form__field">
@@ -290,7 +408,7 @@
             autocomplete="given-name"
             placeholder="Например, Алексей"
             required
-          >
+          />
         </div>
         <div class="order-form__field">
           <label class="order-form__label" for="order-email">E-mail *</label>
@@ -302,7 +420,7 @@
             autocomplete="email"
             placeholder="name@example.com"
             required
-          >
+          />
         </div>
         <div class="order-form__field">
           <label class="order-form__label" for="order-phone">Телефон *</label>
@@ -317,23 +435,41 @@
             placeholder="+79000000000"
             aria-describedby="phone-hint"
             required
+          />
+          <small class="order-form__hint" id="phone-hint"
+            >+7 и 10 цифр, без пробелов: +79000000000.</small
           >
-          <small class="order-form__hint" id="phone-hint">+7 и 10 цифр, без пробелов: +79000000000.</small>
         </div>
         <div class="order-form__field">
-          <label class="order-form__label" for="order-date">Удобная дата связи</label>
-          <input class="order-form__input" id="order-date" name="date" type="date">
+          <label class="order-form__label" for="order-date"
+            >Удобная дата связи</label
+          >
+          <input
+            class="order-form__input"
+            id="order-date"
+            name="date"
+            type="date"
+          />
         </div>
         <div class="order-form__field order-form__field--wide">
-          <label class="order-form__label" for="order-topic">Тема заявки *</label>
-          <select class="order-form__select" id="order-topic" name="topic" required>
-            <option value="product">Заказ товара</option>
+          <label class="order-form__label" for="order-topic"
+            >Тема заявки *</label
+          >
+          <select
+            class="order-form__select"
+            id="order-topic"
+            name="topic"
+            required
+          >
+            <option value="product">Заказ бита</option>
             <option value="consultation">Консультация</option>
-            <option value="delivery">Вопрос о доставке</option>
+            <option value="delivery">Условия лицензии</option>
           </select>
         </div>
         <div class="order-form__field order-form__field--wide">
-          <label class="order-form__label" for="order-comment">Комментарий</label>
+          <label class="order-form__label" for="order-comment"
+            >Комментарий</label
+          >
           <textarea
             class="order-form__textarea"
             id="order-comment"
@@ -344,12 +480,28 @@
           ></textarea>
         </div>
         <div class="order-form__consent order-form__field--wide">
-          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
-          <label class="order-form__label" for="order-agreement">Согласен на обработку указанных данных *</label>
+          <input
+            class="order-form__checkbox"
+            id="order-agreement"
+            name="agreement"
+            type="checkbox"
+            required
+          />
+          <label class="order-form__label" for="order-agreement"
+            >Согласен на обработку указанных данных *</label
+          >
         </div>
         <div class="order-form__actions order-form__field--wide">
-          <button class="button button--primary" type="submit">Отправить заявку</button>
-          <button class="button button--secondary" id="close-order-dialog" type="button">Закрыть</button>
+          <button class="button button--primary" type="submit">
+            Отправить заявку
+          </button>
+          <button
+            class="button button--secondary"
+            id="close-order-dialog"
+            type="button"
+          >
+            Закрыть
+          </button>
         </div>
       </form>
     </dialog>
