@@ -80,19 +80,23 @@ if (orderForm && selectedProduct && successMessage) {
   });
 }
 
-// GIF можно остановить; при reduced-motion картинка сразу неподвижная.
+// CSS вращает одну статичную картинку и на мобильных браузерах.
 const recordToggle = document.querySelector(".record-art__toggle");
-const recordImage = document.querySelector(".record-art__disc");
-if (recordToggle && recordImage) {
-  recordToggle.addEventListener("click", () => {
-    const paused = recordToggle.getAttribute("aria-pressed") !== "true";
-    recordImage.src = paused
-      ? "images/vinyl-still.png"
-      : "images/vinyl-spin.gif";
+const recordArt = document.querySelector(".record-art");
+if (recordToggle && recordArt) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const setPaused = (paused, userInitiated = false) => {
+    recordArt.classList.toggle("is-paused", paused);
+    recordArt.classList.toggle("is-playing", !paused && userInitiated);
     recordToggle.setAttribute("aria-pressed", String(paused));
     recordToggle.textContent = paused
       ? "Включить вращение"
       : "Остановить вращение";
+  };
+  setPaused(reducedMotion.matches);
+  recordToggle.hidden = false;
+  recordToggle.addEventListener("click", () => {
+    setPaused(!recordArt.classList.contains("is-paused"), true);
   });
 }
 
