@@ -10,9 +10,9 @@
     <title>Биты для записи музыки — Beat Store</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/style.css?v=player-layout-2" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/beat-theme.css?v=player-layout-2" />
-    <script src="js/main.js?v=player-layout-2" defer></script>
+    <link rel="stylesheet" href="css/responsive.css?v=responsive-grid-4" />
+    <link rel="stylesheet" href="css/beat-theme.css?v=responsive-grid-4" />
+    <script src="js/main.js?v=hero-layout-3" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
@@ -60,26 +60,24 @@
           </div>
         </div>
         <div class="record-art">
-          <picture>
-            <source
-              media="(prefers-reduced-motion: reduce)"
-              srcset="images/vinyl-still.png"
-            />
+          <div class="record-art__turntable">
             <img
               class="record-art__disc"
-              src="images/vinyl-spin.gif"
+              src="images/vinyl-still.png"
+              srcset="images/vinyl-still-320.png 320w, images/vinyl-still.png 480w"
+              sizes="(max-width: 699px) calc(100vw - 32px), (max-width: 1271px) calc(50vw - 32px), 560px"
               width="480"
               height="480"
               alt="Виниловая пластинка в голубом конверте"
             />
-          </picture>
+          </div>
           <div class="record-art__sleeve" aria-hidden="true">
             <span class="record-art__number">BEAT<br />001</span>
             <span class="record-art__caption"
               >INSTRUMENTALS<br />BEAT STORE / 2026</span
             >
           </div>
-          <button class="record-art__toggle" type="button" aria-pressed="false">
+          <button class="record-art__toggle" type="button" aria-pressed="false" hidden>
             Остановить вращение
           </button>
         </div>
