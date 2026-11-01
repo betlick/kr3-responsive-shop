@@ -10,9 +10,9 @@
     <title>Каталог битов — Beat Store</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/style.css?v=player-layout-2" />
-    <link rel="stylesheet" href="css/responsive.css?v=responsive-grid-4" />
-    <link rel="stylesheet" href="css/beat-theme.css?v=responsive-grid-4" />
-    <script src="js/main.js?v=player-layout-2" defer></script>
+    <link rel="stylesheet" href="css/responsive.css?v=gallery-7" />
+    <link rel="stylesheet" href="css/beat-theme.css?v=beat-9" />
+    <script src="js/main.js?v=gallery-7" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
@@ -65,6 +65,9 @@
           <a class="category-nav__link" href="product.html#beat-03"
             >tana + untiljapan type beat - "finewine"</a
           >
+          <a class="category-nav__link" href="product.html#beat-04"
+            >[free] untiljapan + nosaint type beat - "eye to eye"</a
+          >
         </nav>
       </section>
       <div class="catalog-layout">
@@ -105,6 +108,14 @@
                   value="beat-03"
                 />tana + untiljapan type beat - "finewine"</label
               >
+              <label class="filters-form__label" for="category-eye">
+                <input
+                  id="category-eye"
+                  name="category"
+                  type="checkbox"
+                  value="beat-04"
+                />[free] untiljapan + nosaint type beat - "eye to eye"</label
+              >
             </fieldset>
             <fieldset class="filters-form__group" disabled>
               <legend class="filters-form__legend">Цена, ₽</legend>
@@ -138,7 +149,7 @@
         <section class="catalog-products" aria-labelledby="products-title">
           <div class="section__heading">
             <h2 class="section__title" id="products-title">Все биты</h2>
-            <span class="catalog-products__count">3 бита</span>
+            <span class="catalog-products__count">4 бита</span>
           </div>
           <div class="products-grid products-grid--catalog">
             <article class="product-card product-card--featured">
@@ -270,6 +281,50 @@
                 </button>
               </div>
             </article>
+            <article class="product-card">
+              <div class="beat-preview">
+                <a
+                  class="beat-preview__external"
+                  href="https://www.youtube.com/watch?v=fJrh2Ttu4oI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label='Смотреть [free] untiljapan + nosaint type beat - "eye to eye" на YouTube (новая вкладка)'
+                >
+                  <img
+                    src="images/eye-to-eye-thumb.jpg"
+                    width="1280"
+                    height="720"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span class="beat-preview__play" aria-hidden="true"></span>
+                  <span class="beat-preview__hint" aria-hidden="true">Слушать на YouTube ↗</span>
+                </a>
+              </div>
+              <p class="product-card__category">Бит</p>
+              <h3 class="product-card__title">
+                <a href="product.html#beat-04"
+                  >[free] untiljapan + nosaint type beat - "eye to eye"</a
+                >
+              </h3>
+              <p class="product-card__description">
+                Прослушивание открывается на YouTube. Стоимость и условия
+                использования уточняются при обращении.
+              </p>
+              <p class="product-card__price">Цена по запросу</p>
+              <div class="product-card__actions">
+                <a class="button button--secondary" href="product.html#beat-04"
+                  >Подробнее</a
+                >
+                <button
+                  class="button button--primary product-card__button"
+                  type="button"
+                  data-order-product="beat-04"
+                >
+                  Заказать
+                </button>
+              </div>
+            </article>
           </div>
         </section>
       </div>
@@ -335,6 +390,16 @@
                 <td class="product-table__cell">YouTube</td>
                 <td class="product-table__cell">По запросу</td>
               </tr>
+              <tr>
+                <th class="product-table__cell" scope="row">
+                  <a href="product.html#beat-04"
+                    >[free] untiljapan + nosaint type beat - "eye to eye"</a
+                  >
+                </th>
+                <td class="product-table__cell">Бит</td>
+                <td class="product-table__cell">Ссылка на YouTube</td>
+                <td class="product-table__cell">По запросу</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -393,6 +458,9 @@
             </option>
             <option value="beat-03">
               tana + untiljapan type beat - "finewine" — цена по запросу
+            </option>
+            <option value="beat-04">
+              [free] untiljapan + nosaint type beat - "eye to eye" — цена по запросу
             </option>
           </select>
         </div>

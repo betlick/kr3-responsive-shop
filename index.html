@@ -10,9 +10,9 @@
     <title>Биты для записи музыки — Beat Store</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/style.css?v=player-layout-2" />
-    <link rel="stylesheet" href="css/responsive.css?v=responsive-grid-4" />
-    <link rel="stylesheet" href="css/beat-theme.css?v=responsive-grid-4" />
-    <script src="js/main.js?v=hero-layout-3" defer></script>
+    <link rel="stylesheet" href="css/responsive.css?v=gallery-7" />
+    <link rel="stylesheet" href="css/beat-theme.css?v=beat-9" />
+    <script src="js/main.js?v=gallery-7" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
@@ -80,6 +80,35 @@
           <button class="record-art__toggle" type="button" aria-pressed="false" hidden>
             Остановить вращение
           </button>
+        </div>
+      </section>
+      <section class="photo-gallery" aria-label="Фотогалерея Beat Store" aria-roledescription="карусель">
+        <ol class="photo-gallery__track" tabindex="0" aria-label="Фотографии Beat Store">
+          <li class="photo-gallery__slide" aria-label="Фото 1 из 4">
+            <img src="images/che_ss.jpg" width="1200" height="800" alt="Группа людей на музыкальном мероприятии" />
+          </li>
+          <li class="photo-gallery__slide" aria-label="Фото 2 из 4">
+            <img src="images/lucy.jpg" width="735" height="487" alt="Человек у трейлера, черно-белая фотография" loading="lazy" />
+          </li>
+          <li class="photo-gallery__slide" aria-label="Фото 3 из 4">
+            <img src="images/nine1.jpg" width="735" height="414" alt="Музыкант на фоне светящегося экрана" loading="lazy" />
+          </li>
+          <li class="photo-gallery__slide" aria-label="Фото 4 из 4">
+            <img src="images/protect.jpg" width="736" height="513" alt="Человек перед зданием с традиционной крышей" loading="lazy" />
+          </li>
+        </ol>
+        <div class="photo-gallery__controls" hidden>
+          <span class="photo-gallery__counter">01 / 04</span>
+          <div class="photo-gallery__dots" aria-label="Выбор фотографии">
+            <button type="button" aria-label="Показать фото 1" aria-current="true"></button>
+            <button type="button" aria-label="Показать фото 2"></button>
+            <button type="button" aria-label="Показать фото 3"></button>
+            <button type="button" aria-label="Показать фото 4"></button>
+          </div>
+          <div class="photo-gallery__arrows">
+            <button class="photo-gallery__previous" type="button" aria-label="Предыдущее фото">←</button>
+            <button class="photo-gallery__next" type="button" aria-label="Следующее фото">→</button>
+          </div>
         </div>
       </section>
       <section class="section" id="popular" aria-labelledby="popular-title">
@@ -219,6 +248,50 @@
               </button>
             </div>
           </article>
+          <article class="product-card">
+            <div class="beat-preview">
+              <a
+                class="beat-preview__external"
+                href="https://www.youtube.com/watch?v=fJrh2Ttu4oI"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label='Смотреть [free] untiljapan + nosaint type beat - "eye to eye" на YouTube (новая вкладка)'
+              >
+                <img
+                  src="images/eye-to-eye-thumb.jpg"
+                  width="1280"
+                  height="720"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="beat-preview__play" aria-hidden="true"></span>
+                <span class="beat-preview__hint" aria-hidden="true">Слушать на YouTube ↗</span>
+              </a>
+            </div>
+            <p class="product-card__category">Бит</p>
+            <h3 class="product-card__title">
+              <a href="product.html#beat-04"
+                >[free] untiljapan + nosaint type beat - "eye to eye"</a
+              >
+            </h3>
+            <p class="product-card__description">
+              Прослушивание открывается на YouTube. Стоимость и условия использования
+              уточняются при обращении.
+            </p>
+            <p class="product-card__price">Цена по запросу</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product.html#beat-04"
+                >Подробнее</a
+              >
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-order-product="beat-04"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
         </div>
       </section>
       <p
@@ -251,7 +324,7 @@
           <article class="benefit">
             <h3 class="benefit__title">Характеристики битов</h3>
             <p class="benefit__text">
-              У каждого бита есть плеер и информация об условиях покупки.
+              Для каждого бита есть прослушивание и информация об условиях покупки.
             </p>
             <a href="product.html">Открыть характеристики →</a>
           </article>
@@ -285,7 +358,7 @@
               Как посмотреть характеристики?
             </summary>
             <p class="faq__answer">
-              Ссылка «Подробнее» в карточке ведёт на страницу с плеером и
+              Ссылка «Подробнее» в карточке ведёт на страницу с прослушиванием и
               информацией о бите.
             </p>
           </details>
@@ -363,6 +436,9 @@
             </option>
             <option value="beat-03">
               tana + untiljapan type beat - "finewine" — цена по запросу
+            </option>
+            <option value="beat-04">
+              [free] untiljapan + nosaint type beat - "eye to eye" — цена по запросу
             </option>
           </select>
         </div>
