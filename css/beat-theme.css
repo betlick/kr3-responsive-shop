@@ -388,7 +388,7 @@ h2 {
 }
 .beat-player {
   background: #231815;
-  min-height: 200px;
+  min-height: 0;
 }
 .product-detail {
   grid-template-columns: minmax(0, 1fr);
@@ -463,6 +463,31 @@ h2 {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(12px);
+}
+@media (max-width: 479px) {
+  .photo-gallery__controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 12px;
+  }
+  .photo-gallery__controls[hidden] {
+    display: none;
+  }
+  .photo-gallery__dots {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+  }
+  .photo-gallery__dots button {
+    width: 44px;
+    height: 44px;
+    padding: 17px;
+  }
+  .section__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 @media (min-width: 700px) {
   .hero {
