@@ -17,13 +17,23 @@ video {
 }
 
 .site-nav__list {
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 12px;
 }
 
 .site-nav__link,
 .button {
   min-height: 44px;
   padding: 10px 16px;
+}
+
+.site-nav__link {
+  display: grid;
+  place-items: center;
+  padding-inline: 4px;
+  text-align: center;
 }
 
 .hero {
@@ -135,6 +145,12 @@ video {
   padding-bottom: 24px;
 }
 
+@media (min-width: 480px) {
+  .site-nav__list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 640px) {
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -162,6 +178,7 @@ video {
   }
 
   .site-nav__list {
+    display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0;
